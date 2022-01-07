@@ -14,7 +14,7 @@ describe 'requisições com put e patch' do
 
         @requisicao_put = Contato.put('/contacts/936', body: @body)
         puts @requisicao_put
-    end
+   end
 
     it 'patch' do 
         @body = {

@@ -11,15 +11,14 @@ describe 'fazer uma requisicao' do
            "city": "São Paulo"
         }.to_json
 
-#        @headers = {
-#            "Accept":       'application/vnd.tasksmanager.v2',
-#            'Content-Type': 'application/json'
-#        }
-#
-#        @request = HTTParty.post('https://api-de-tarefas.kerokuapp.com/contacts', body: @body , headers: @headers)
-#        puts @request
+        @headers = {
+            "Accept":       'application/vnd.tasksmanager.v2',
+            'Content-Type': 'application/json'
+        }
 
-         @request = Contato.post('/contacts', body: @body) 
-         puts @request
+        @request = HTTParty.post('https://api-de-tarefas.herokuapp.com/contacts', body: @body , headers: @headers)
+        puts @request
+        @request = Contato.post('/contacts/', body: @body) 
+        puts @request
     end
 end

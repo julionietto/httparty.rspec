@@ -8,8 +8,8 @@ describe 'Buscar dados de contatos' do
     end
 
     #Como fizemos a inclusão do module Contato, existe outra forma mais limpa de fazer 
-    #it 'get-include-module' do
-    #    @melhor_jeito = Contato.get('/contacts')
-    #    puts @melhor_jeito
-    #end
+    it 'get-include-module' do
+        @melhor_jeito = Contato.get('/contacts')
+        puts @melhor_jeito
+    end
 end
