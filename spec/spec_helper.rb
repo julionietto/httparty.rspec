@@ -1,14 +1,17 @@
 require 'httparty'
 require 'httparty/request'
 require 'httparty/response/headers'
+require 'faker'
 
-# Para que o Ruby localize o modulo de contato e consiga fazer o include.
+# Para que o Ruby localize o modulo de contato/criar e consiga fazer o include.
 require_relative '../services/contatos_service.rb'
+require_relative '../services/criar_service.rb'
 
 RSpec.configure do |config|
 
-  #modulo global para API de Contatos
+  #modulo global para API de Contatos e Criar
   include Contato
+  include Criar
 
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
