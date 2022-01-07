@@ -2,7 +2,14 @@ require 'httparty'
 require 'httparty/request'
 require 'httparty/response/headers'
 
+# Para que o Ruby localize o modulo de contato e consiga fazer o include.
+require_relative '../services/contatos_service.rb'
+
 RSpec.configure do |config|
+
+  #modulo global para API de Contatos
+  include Contato
+
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
